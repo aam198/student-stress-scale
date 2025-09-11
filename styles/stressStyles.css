@@ -1,0 +1,223 @@
+
+:root{
+  dark-blue: #0e2439;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* border-top-card styling */
+.border-top-card{
+  background: #f0f2fa;
+  border-radius: 0.5rem;
+  border-top: .25rem solid #b7bac9;
+  margin: 2.5rem;
+  padding: 1.5rem 1.5rem 2rem;
+  max-width: 50rem;
+  width: 100%;
+}
+
+.border-top-card .title{
+  color: #374886;
+  font-size: 1.25rem;
+  letter-spacing: normal;
+  line-height: 1.25rem;
+  margin-bottom: .5rem;
+  text-align: left;
+}
+.border-top-card p{
+  padding-top: 0.5rem;
+  margin-bottom: 0;
+  line-height: 1.875rem;
+  color: #3a3b41;
+}
+
+/* info-card Styling */
+.info-card{
+  width: calc(100% - 5rem);
+  background-color: #f9f4eb;
+  color: #2e2e30;
+  font-family: 'ProximaNovaRegular', Arial, sans-serif;
+  border-radius: 1rem;
+  border-bottom-right-radius: 2px;
+  box-shadow: 10px 10px #e6e0d3;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 2.5rem 2.5rem 2.5rem 2.5rem;
+  padding: 1.6rem;
+}
+
+.info-card-heading{
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+
+}
+
+/* tab container */
+div.tabbed-interface{
+  border: 2px solid #cbd5e0;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.06),0 1px 2px 0 rgba(0,0,0,0.06);
+}
+/* Checkbox styling  */
+
+input[type="checkbox"]{
+  height: 18px;
+  width: 18px;
+}
+
+input[type="checkbox"]:checked{
+  accent-color: #2d728f;
+}
+
+
+input:focus, input:focus-visible{
+  outline: 1px solid #2d728f;
+}
+
+input:focus:not(:focus-visible){
+  outline: none;
+  box-shadow: 1px 1px 1px rgba(1, 1, 0, 0.3);
+}
+
+button.calculate-score, button.reset-form{
+  cursor: pointer;
+  margin: 1.6rem;
+  font-size: 16px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.06),0 1px 2px 0 rgba(0,0,0,0.06);
+  padding: .5rem 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #cbd5e0;
+  transition: all .2s ease-in;
+  background-color: #F0F0F2;
+}
+
+button.calculate-score{
+  background-color: #407C96;
+  color: #ffffff;
+}
+
+button.reset-form{
+  background-color: #e1e1e1;
+}
+
+button.calculate-score:hover{
+  background-color: #245b72;
+}
+
+button.reset-form:hover{
+  background-color: #cbcbcb;
+}
+
+/* Table Styling */
+.table-container{
+  border-radius: .75rem;
+  width: 100%;
+  margin: 4rem 2rem;
+}
+
+table {
+  margin: 0 auto;
+  border-spacing: 0;
+  border-collapse: separate;
+  color: #4e4e4e;
+  padding-bottom: 1rem;
+  width: 70vw;
+}
+
+table tr td:first-child,
+table tr th:first-child{
+  border-left: 1px solid #d4d7d9
+}
+th, td{
+  --grey-500: #d4d7d9;
+  border-bottom: 1px solid var(--grey-500);
+  border-right: 1px solid var(--grey-500);
+}
+th{
+  padding: 1rem;
+  background-color: #eceff1;
+}
+td {
+  padding: 0.6rem;
+  text-align: left;
+}
+
+table tr th{
+  border-top: 1px solid #d4d7d9;
+}
+table tr:first-child th:first-child{
+  border-top-left-radius: 0.75rem;
+}
+table tr:first-child th:last-child{
+  border-top-right-radius: 0.75rem;
+}
+table tr:last-child td:first-child{
+  border-bottom-left-radius: 0.75rem;
+}
+table tr:last-child td:last-child{
+  border-bottom-right-radius: 0.75rem;
+}
+
+/* 
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+} */
+
+/* Base for label styling */
+/* input[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked{
+  position: relative;
+  padding-left: 2.3rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  cursor: pointer;
+} */
+
+
+
+/* checkbox aspect */
+/* [type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.4em;
+  height: 1.4em;
+  border: 1px solid #aaa;
+  background: #FFF;
+  border-radius: .2em;
+  box-shadow: inset 0 1px 3px rgba(0,0,0, .1), 0 0 0 rgba(203, 34, 237, .2);
+  -webkit-transition: all .275s;
+      transition: all .275s;
+} */
+
+/* checked mark aspect */
+/* [type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✕';
+  position: absolute;
+  top: .525em;
+  left: .18em;
+  font-size: 1.375em;
+  color: #CB22ED;
+  line-height: 0;
+  -webkit-transition: all .2s;
+      transition: all .2s;
+} */
+
+
+	/* Accessibility */
+	/* [type="checkbox"]:checked:focus + label:before,
+	[type="checkbox"]:not(:checked):focus + label:before {
+		box-shadow: inset 0 1px 3px rgba(0,0,0, .1), 0 0 0 6px rgba(203, 34, 237, .2);
+	} */
