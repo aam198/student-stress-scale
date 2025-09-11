@@ -2,124 +2,169 @@
 <html lang="en">
 
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stress Score for College</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Stress Score Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/stressStyles.css" />
   </head>
 
   <body>
-    <!-- TODO: Build Tabbed Interface: Adult / Non Adult -->
-    <div class="tabcontent-container">
-      <form id="adult-form" onsubmit="calculateScaleScore(event)">
-        <p>Adult</p>
-        <label><input type="checkbox" name="item1" value="100"> Death of a
-          spouse</label>
-        <label><input type="checkbox" name="item2" value="73"> Divorce</label>
-        <label><input type="checkbox" name="item3" value="65"> Marital
-          separation</label>
-        <label><input type="checkbox" name="item4" value="63"> Imprisonment</label>
-        <label><input type="checkbox" name="item5" value="63"> Death of a close
-          family member</label>
-        <label><input type="checkbox" name="item6" value="53"> Personal injury or
-          illness</label>
-        <label><input type="checkbox" name="item7" value="50"> Marriage</label>
-        <label><input type="checkbox" name="item8" value="47"> Dismissal from
-          work</label>
-        <label><input type="checkbox" name="item9" value="45"> Marital
-          reconciliation</label>
-        <label><input type="checkbox" name="item10" value="45"> Retirement</label>
-        <label><input type="checkbox" name="item11" value="44"> Change in health of
-          family member</label>
-        <label><input type="checkbox" name="item12" value="40"> Pregnancy</label>
-        <label><input type="checkbox" name="item13" value="39"> Sexual difficulties</label>
-        <label><input type="checkbox" name="item14" value="39"> Gain a new family member</label>
-        <label><input type="checkbox" name="item15" value="39"> Business readjustment</label>
-        <label><input type="checkbox" name="item16" value="38"> Change in financial state</label>
-        <label><input type="checkbox" name="item17" value="37"> Death of a close friend</label>
-        <label><input type="checkbox" name="item18" value="36"> Change to different line of work</label>
-        <label><input type="checkbox" name="item19" value="35"> Change in frequency of arguments</label>
-        <label><input type="checkbox" name="item20" value="32"> Major mortgage</label>
-        <label><input type="checkbox" name="item21" value="30"> Foreclosure of mortgage or loan</label>
-        <label><input type="checkbox" name="item22" value="29"> Change in responsibilities at work</label>
-        <label><input type="checkbox" name="item23" value="29"> Child leaving home</label>
-        <label><input type="checkbox" name="item24" value="29"> Trouble with in-laws</label>
-        <label><input type="checkbox" name="item25" value="28"> Outstanding personal achievement</label>
-        <label><input type="checkbox" name="item26" value="26"> Spouse starts or stops work</label>
-        <label><input type="checkbox" name="item27" value="26"> Beginning or end school</label>
-        <label><input type="checkbox" name="item28" value="25"> Change in living conditions</label>
-        <label><input type="checkbox" name="item29" value="24"> Revision of personal habits</label>
-        <label><input type="checkbox" name="item30" value="23"> Trouble with boss</label>
-        <label><input type="checkbox" name="item31" value="20"> Change in working hours or conditions</label>
-        <label><input type="checkbox" name="item32" value="20"> Change in residence</label>
-        <label><input type="checkbox" name="item33" value="20"> Change in schools</label>
-        <label><input type="checkbox" name="item34" value="19"> Change in recreation</label>
-        <label><input type="checkbox" name="item35" value="19"> Change in church activities</label>
-        <label><input type="checkbox" name="item36" value="18"> Change in social activities</label>
-        <label><input type="checkbox" name="item37" value="17"> Minor mortgage or loan</label>
-        <label><input type="checkbox" name="item38" value="16"> Change in sleeping habits</label>
-        <label><input type="checkbox" name="item39" value="15"> Change in number of family reunions</label>
-        <label><input type="checkbox" name="item40" value="15"> Change in eating habits</label>
-        <label><input type="checkbox" name="item41" value="13"> Vacation</label>
-        <label><input type="checkbox" name="item42" value="12"> Major holiday</label>
-        <label><input type="checkbox" name="item43" value="11"> Minor violation of law</label>
-      </form>
-      <button id="calculateScore">Calculate</button>
-      <button id="reset">Reset</button>
-
-      <p><strong><span id="result"></span></strong></p>
-      <p style="display: none" id="interpText">
-        <strong>Interpretation:</strong>The subject is described as at
-        <strong><span id="interpScore"></span></strong>
-      </p>
-
-      <form id="nonAdult-form">
-        <p>Non-Adult</p>
-
-        <label><input type="checkbox" name="item1" value="100"> Death of a
-          parent</label>
-        <label><input type="checkbox" name="item2" value="100"> Unplanned pregnancy/abortion</label>
-        <label><input type="checkbox" name="item3" value="95"> Getting married</label>
-        <label><input type="checkbox" name="item4" value="90"> Divorce of parents</label>
-        <label><input type="checkbox" name="item5" value="80"> Acquiring a visible deformity</label>
-        <label><input type="checkbox" name="item6" value="70"> Fathering a child</label>
-        <label><input type="checkbox" name="item7" value="70"> Jail sentence of parent for over one year</label>
-        <label><input type="checkbox" name="item8" value="69"> Marital separation of parents</label>
-        <label><input type="checkbox" name="item9" value="68"> Death of a brother or sister</label>
-        <label><input type="checkbox" name="item10" value="67"> Change in acceptance by peers</label>
-        <label><input type="checkbox" name="item11" value="64"> Unplanned pregnancy of sister</label>
-        <label><input type="checkbox" name="item12" value="63"> Discovery of being an adopted child</label>
-        <label><input type="checkbox" name="item13" value="63"> Marriage of parent to stepparent</label>
-        <label><input type="checkbox" name="item14" value="63"> Death of a close friend</label>
-        <label><input type="checkbox" name="item15" value="62"> Having a visible congenital deformity</label>
-        <label><input type="checkbox" name="item16" value="58"> Serious illness requiring hospitalization</label>
-        <label><input type="checkbox" name="item17" value="56"> Failure of a grade in school</label>
-        <label><input type="checkbox" name="item18" value="55"> Not making an extracurricular activity</label>
-        <label><input type="checkbox" name="item19" value="55"> Hospitalization of a parent</label>
-        <label><input type="checkbox" name="item20" value="53"> Jail sentence of parent for over 30 days</label>
-        <label><input type="checkbox" name="item21" value="53"> Breaking up with boyfriend or girlfriend</label>
-        <label><input type="checkbox" name="item22" value="51"> Beginning to date</label>
-        <label><input type="checkbox" name="item23" value="50"> Suspension from school</label>
-        <label><input type="checkbox" name="item24" value="50"> Becoming involved with drugs or alcohol</label>
-        <label><input type="checkbox" name="item25" value="50"> Birth of a brother or sister</label>
-        <label><input type="checkbox" name="item26" value="47"> Increase in arguments between parents</label>
-        <label><input type="checkbox" name="item27" value="46"> Loss of job by parent</label>
-        <label><input type="checkbox" name="item28" value="46"> Outstanding personal achievement</label>
-        <label><input type="checkbox" name="item29" value="45"> Change in parent's financial status</label>
-        <label><input type="checkbox" name="item30" value="43"> Accepted at college of choice</label>
-        <label><input type="checkbox" name="item31" value="42"> Being a senior in high school</label>
-        <label><input type="checkbox" name="item32" value="41"> Hospitalization of a sibling</label>
-        <label><input type="checkbox" name="item33" value="38"> Increased absence of parent from home</label>
-        <label><input type="checkbox" name="item34" value="37"> Brother or sister leaving home</label>
-        <label><input type="checkbox" name="item35" value="34"> Addition of third adult to family</label>
-        <label><input type="checkbox" name="item36" value="31"> Becoming a full fledged member of a church</label>
-        <label><input type="checkbox" name="item37" value="27"> Decrease in arguments between parents</label>
-        <label><input type="checkbox" name="item38" value="26"> Decrease in arguments with parents</label>
-        <label><input type="checkbox" name="item39" value="26"> Mother or father beginning work</label>
-      </form>
+    <div class="border-top-card">
+      <h4 class="title">Social Readjustment Rating Scale</h4>
+      <p>Minim aliquip ea dolore fugiat amet fugiat aliquip labore. Proident anim adipisicing culpa esse nisi minim esse voluptate culpa ipsum ut laborum id. Sunt irure elit ut sit irure non nisi tempor. Fugiat in culpa non eiusmod culpa anim magna fugiat labore.</p>
     </div>
-  </body>
+    <div class="info-card">
+      <h4 class="info-card-heading">Tip</h4>
+      <div class="tip-content">
+        <p>Dolor aliquip proident ipsum et laborum id occaecat ipsum culpa cillum nostrud nostrud. Nostrud incididunt laboris eiusmod esse reprehenderit nulla commodo commodo. Dolor qui officia dolore cillum.</p>
+      </div>
+    </div>
+    <div class="tabbed-interface container-fluid">
+      <div class="tab-section" data-group="adult">
+        <form class="stress-form">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <label><input type="checkbox" name="item1" value="100"> 1. Death of a
+                spouse</label><br />
+              <label><input type="checkbox" name="item2" value="73"> 2. Divorce</label><br />
+              <label><input type="checkbox" name="item3" value="65"> 3. Marital
+                separation</label><br />
+              <label><input type="checkbox" name="item4" value="63"> 4. Imprisonment</label><br />
+              <label><input type="checkbox" name="item5" value="63"> 5. Death of a close
+                family member</label><br />
+              <label><input type="checkbox" name="item6" value="53"> 6. Personal injury or
+                illness</label><br />
+              <label><input type="checkbox" name="item7" value="50"> 7. Marriage</label><br />
+              <label><input type="checkbox" name="item8" value="47"> 8. Dismissal from
+                work</label><br />
+              <label><input type="checkbox" name="item9" value="45"> 9. Marital
+                reconciliation</label><br />
+              <label><input type="checkbox" name="item10" value="45"> 10. Retirement</label><br />
+              <label><input type="checkbox" name="item11" value="44"> 11. Change in health of
+                family member</label><br />
+              <label><input type="checkbox" name="item12" value="40"> 12. Pregnancy</label><br />
+              <label><input type="checkbox" name="item13" value="39"> 13. Sexual difficulties</label><br />
+              <label><input type="checkbox" name="item14" value="39"> 14. Gain a new family member</label><br />
+              <label><input type="checkbox" name="item15" value="39"> 15. Business readjustment</label><br />
+              <label><input type="checkbox" name="item16" value="38"> 16. Change in financial state</label><br />
+              <label><input type="checkbox" name="item17" value="37"> 17. Death of a close friend</label><br />
+              <label><input type="checkbox" name="item18" value="36"> 18. Change to different line of work</label><br />
+              <label><input type="checkbox" name="item19" value="35"> 19. Change in frequency of arguments</label><br />
+              <label><input type="checkbox" name="item20" value="32"> 20. Major mortgage</label><br />
+              <label><input type="checkbox" name="item21" value="30"> 21. Foreclosure of mortgage or loan</label><br />
+              <label><input type="checkbox" name="item22" value="29"> 22. Change in responsibilities at work</label><br />
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <label><input type="checkbox" name="item23" value="29"> 23. Child leaving home</label><br />
+              <label><input type="checkbox" name="item24" value="29"> 24. Trouble with in-laws</label><br />
+              <label><input type="checkbox" name="item25" value="28"> 25. Outstanding personal achievement</label><br />
+              <label><input type="checkbox" name="item26" value="26"> 26. Spouse starts or stops work</label><br />
+              <label><input type="checkbox" name="item27" value="26"> 27. Beginning or end school</label><br />
+              <label><input type="checkbox" name="item28" value="25"> 28. Change in living conditions</label><br />
+              <label><input type="checkbox" name="item29" value="24"> 29. Revision of personal habits</label><br />
+              <label><input type="checkbox" name="item30" value="23"> 30. Trouble with boss</label><br />
+              <label><input type="checkbox" name="item31" value="20"> 31. Change in working hours or conditions</label><br />
+              <label><input type="checkbox" name="item32" value="20"> 32. Change in residence</label><br />
+              <label><input type="checkbox" name="item33" value="20"> 33. Change in schools</label><br />
+              <label><input type="checkbox" name="item34" value="19"> 34. Change in recreation</label><br />
+              <label><input type="checkbox" name="item35" value="19"> 35. Change in church activities</label><br />
+              <label><input type="checkbox" name="item36" value="18"> 36. Change in social activities</label><br />
+              <label><input type="checkbox" name="item37" value="17"> 37. Minor mortgage or loan</label><br />
+              <label><input type="checkbox" name="item38" value="16"> 38. Change in sleeping habits</label><br />
+              <label><input type="checkbox" name="item39" value="15"> 39. Change in number of family reunions</label><br />
+              <label><input type="checkbox" name="item40" value="15"> 40. Change in eating habits</label><br />
+              <label><input type="checkbox" name="item41" value="13"> 41. Vacation</label><br />
+              <label><input type="checkbox" name="item42" value="12"> 42. Major holiday</label><br />
+              <label><input type="checkbox" name="item43" value="11"> 43. Minor violation of law</label><br />
+            </div>
+          </div>
+        </form>
 
-  <script src="/js/stressCalc.js"></script>
+        <button class="calculate-score">Calculate</button>
+        <button class="reset-form">Reset</button>
+        <div>
+          <strong>Holmes & Rahe Stress Score = <span class="result"> </span></strong><br/>
+          <div>
+            <strong>Interpretation: </strong> 
+            <span class="interp-text" style="display:none;"> The subject is described as at</span>
+          <strong><span class="interp-score"></span></strong>
+          </div>
+        </div>
+        <!-- TODO: table -->
+          
+      </div>
+
+      <div class="tab-section" data-group="results-table">
+        <div class="table-container">
+          <table>
+            <tr>
+                <th>Stressor</th>
+                <th>LCU</th>
+                <th>Stressor</th>
+                <th>LCU</th>
+            </tr>
+            <tr><td>1. Death of a spouse</td><td>100</td><td>23. Child leaving home</td><td>29</td></tr>
+            <tr><td>2. Divorce</td><td>73</td><td>24. Trouble with in-laws</td><td>29</td></tr>
+            <tr><td>3. Marital separation</td><td>65</td><td>25. Outstanding personal achievement</td><td>28</td></tr>
+            <tr><td>4. Imprisonment</td><td>63</td><td>26. Spouse starts or stops work</td><td>26</td></tr>
+            <tr><td>5. Death of a close family member</td><td>63</td><td>27. Beginning or end of school</td><td>26</td></tr>
+            <tr><td>6. Personal injury or illness</td><td>53</td><td>28. Change in living conditions</td><td>25</td></tr>
+            <tr><td>7. Marriage</td><td>50</td><td>29. Revision of personal habits</td><td>24</td></tr>
+            <tr><td>8. Dismissal from work</td><td>47</td><td>30. Trouble with boss</td><td>23</td></tr>
+            <tr><td>9. Marital reconciliation</td><td>45</td><td>31. Change in working hours or conditions</td><td>20</td></tr>
+            <tr><td>10. Retirement</td><td>45</td><td>32. Change in residence</td><td>20</td></tr>
+            <tr><td>11. Change in health of family member</td><td>44</td><td>33. Change in schools</td><td>20</td></tr>
+            <tr><td>12. Pregnancy</td><td>40</td><td>34. Change in recreation</td><td>19</td></tr>
+            <tr><td>13. Sexual difficulties</td><td>39</td><td>35. Change in church activities</td><td>19</td></tr>
+            <tr><td>14. Gain a new family member</td><td>39</td><td>36. Change in social activities</td><td>18</td></tr>
+            <tr><td>15. Business readjustment</td><td>39</td><td>37. Minor mortgage or loan</td><td>17</td></tr>
+            <tr><td>16. Change in financial state</td><td>38</td><td>38. Change in sleeping habits</td><td>16</td></tr>
+            <tr><td>17. Death of a close friend</td><td>37</td><td>39. Change in number of family reunions</td><td>15</td></tr>
+            <tr><td>18. Change to different line of work</td><td>36</td><td>40. Change in eating habits</td><td>15</td></tr>
+            <tr><td>19. Change in frequency of arguments</td><td>35</td><td>41. Vacation</td><td>13</td></tr>
+            <tr><td>20. Major mortgage</td><td>32</td><td>42. Major holiday</td><td>12</td></tr>
+            <tr><td>21. Foreclosure of mortgage or loan</td><td>30</td><td>43. Minor violation of law</td><td>11</td></tr>
+            <tr><td>22. Change in responsibilities at work</td><td>29</td><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".tab-section").forEach((section) => {
+          const form = section.querySelector(".stress-form");
+          const resultDisplay = section.querySelector(".result");
+          const interpText = section.querySelector(".interp-text");
+          const interpScore = section.querySelector(".interp-score");
+
+          function calculateScaleScore() {
+            let totalScore = [...form.querySelectorAll('input[type="checkbox"]:checked')]
+              .reduce((sum, checkbox) => sum + parseInt(checkbox.value, 10), 0);
+
+            resultDisplay.textContent = totalScore;
+            interpText.style.display = "inline-block";
+            interpScore.textContent =
+              totalScore <= 150 ? " low risk of illness." :
+                totalScore <= 299 ? " moderate risk with 50% chances of adverse health outcome." :
+                  " high risk of illness with 80% chances of major health breakdown.";
+          }
+
+          function resetForm() {
+            form.reset();
+            resultDisplay.textContent = "";
+            interpText.style.display = "none";
+          }
+
+          section.querySelector(".calculate-score").addEventListener("click", calculateScaleScore);
+          section.querySelector(".reset-form").addEventListener("click", resetForm);
+        });
+      });
+    </script>
+
+
+  </body>
 
 </html>
