@@ -95,12 +95,12 @@ input[type="checkbox"]{
 }
 
 input[type="checkbox"]:checked{
-  accent-color: #2d728f;
+  accent-color: #6d8a91;
 }
 
 
 input:focus, input:focus-visible{
-  outline: 1px solid #2d728f;
+  outline: 1px solid #6d8a91;
 }
 
 input:focus:not(:focus-visible){
@@ -121,7 +121,7 @@ button.calculate-score, button.reset-form{
 }
 
 button.calculate-score{
-  background-color: #407C96;
+  background-color: #6d8a91;
   color: #ffffff;
 }
 
@@ -130,7 +130,7 @@ button.reset-form{
 }
 
 button.calculate-score:hover{
-  background-color: #245b72;
+  background-color: #4c6166;
 }
 
 button.reset-form:hover{
