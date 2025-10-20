@@ -72,9 +72,8 @@
         <div>
           <strong>Total Points: <span class="result"> </span></strong><br/>
           <div>
-            <strong>Stress Level: </strong> 
-            <span class="interp-text" style="display:none;"> </span>
-          <strong><span class="interp-score"></span></strong>
+            <strong>Stress Level:<span class="interp-text" style="display:none;"></span>
+          <span class="interp-score"></span></strong>
           </div>
         </div>
         <!-- TODO: table -->
@@ -142,6 +141,7 @@
           function resetForm() {
             form.reset();
             resultDisplay.textContent = "";
+            interpScore.textContent="";
             interpText.style.display = "none";
           }
 
