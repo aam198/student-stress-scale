@@ -10,7 +10,6 @@
   </head>
 
   <body>
-    
     <div class="tabbed-interface container-fluid">
       <div class="tab-section" data-group="adult">
         <form class="stress-form">
@@ -56,11 +55,12 @@
 
         <button class="calculate-score">Calculate</button>
         <button class="reset-form">Reset</button>
+        <!-- TODO: Have result container initally hidden, add in animation based on submission -->
         <div class="result-container">
           <div class="result-card">
             <strong>Total Points: <span class="result"> </span></strong><br/>
-            <strong>Stress Level:<span class="interp-text" style="display:none;"></span>
-            <span class="interp-score"></span></strong>
+            <strong>Stress Level:</strong><span class="interp-text"></span>
+            <span class="interp-score"></span>
           </div>
         </div>
       </div>
