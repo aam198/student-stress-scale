@@ -156,6 +156,11 @@ button.reset-form:hover{
   margin: 0.5rem 1rem;
 }
 
+.result-card p{
+  margin: 0;
+  padding: 0;
+}
+
 /* Table Styling */
 .table-container{
   border-radius: .75rem;
