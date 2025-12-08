@@ -59,8 +59,7 @@
         <div class="result-container">
           <div class="result-card">
             <p>Total Points: <strong><span class="result"> </span></strong></p>
-            <!-- Bug Fix: Do we need 2 spans? -->
-            <p>Stress Level:<strong><span class="interp-text"></span>
+            <p>Stress Level:<strong>
             <span class="interp-score"></span></strong></p>
           </div>
         </div>
@@ -107,7 +106,6 @@
         document.querySelectorAll(".tab-section").forEach((section) => {
           const form = section.querySelector(".stress-form");
           const resultDisplay = section.querySelector(".result");
-          const interpText = section.querySelector(".interp-text");
           const interpScore = section.querySelector(".interp-score");
 
           function calculateScaleScore() {
@@ -115,7 +113,6 @@
               .reduce((sum, checkbox) => sum + parseInt(checkbox.value, 10), 0);
 
             resultDisplay.textContent = totalScore;
-            interpText.style.display = "inline-block";
             interpScore.textContent =
               totalScore <= 149 ? "Very little stress" :
               totalScore <= 199 ? "Mild stress":
